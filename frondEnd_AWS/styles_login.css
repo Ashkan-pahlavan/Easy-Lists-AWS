@@ -1,0 +1,228 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle farthest-corner at 10% 20%, rgba(90, 92, 106, 1) 0%, rgba(32, 45, 58, 1) 81.3%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  font-family: "Open Sans", 
+  -apple-system, BlinkMacSystemFont, 
+  "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
+  "Helvetica Neue", Helvetica, Arial, sans-serif; 
+}
+
+.container {
+  text-align: center;
+}
+
+.login {
+  font-size: 0.8em;
+  box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, .5);
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, .1);
+  padding: 25px 35px;
+  color: white;
+  margin: 20px 130px;
+  width: 400px;
+}
+
+.login h1 {
+  color: #0fc3cc;
+  font-size: 6em;
+  text-shadow: 6px -3px 6px #bfbfbf;
+  padding: 1px;
+  margin: 2px;
+}
+
+h2 {
+  color: #0fc3cc;
+}
+
+.login img.avatar {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+  width: calc(100% - 40px);
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.login button {
+  background-color: #0fc3cc;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  width: calc(100% - 40px);
+}
+
+.login button:hover {
+  background-color: gold;
+}
+.showpass1{
+  display: flex;
+}
+.showpass1 p{
+  padding: 0; 
+  margin: 8.5px;
+  position: relative;
+  color: rgb(152, 149, 149);
+
+}
+.showpass2{
+  display: flex;
+}
+.showpass2 p{
+  padding: 0; 
+  margin: 8.5px;
+  position: relative;
+  color: rgb(152, 149, 149);
+
+}
+
+.password-toggle {
+  margin-bottom: 5px;
+  position: relative;
+  width: 50px; /* Breite des Oval-Containers */
+  height: 30px; /* Höhe des Oval-Containers */
+  cursor: pointer;
+}
+
+.oval {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px; /* Hälfte der Höhe für das ovale Design */
+  background-color: rgba(255, 0, 13, 0.593);
+  transition: background-color 0.3s ease;
+}
+
+.circle {
+  position: absolute;
+  top: 15%;
+  left: 10%; /* Anfangsposition des Kreises */
+  width: 20px; /* Durchmesser des Kreises */
+  height: 20px; /* Durchmesser des Kreises */
+  border-radius: 50%;
+  background-color: white;
+  transition: left 0.3s ease;
+}
+
+.password-toggle.active .oval {
+  background-color: rgba(9, 157, 16, 0.526); /* Farbe des Oval-Containers im aktiven Zustand */
+}
+
+.password-toggle.active .circle {
+  left: 50%; /* Endposition des Kreises */
+}
+
+/* Stile für kleine Bildschirme (Handy) */
+@media screen and (max-width: 1000px) {
+  .imgcontainer{
+    margin-top: 5vw;
+    margin-left: 10%;
+  }
+  body {
+    display: block;
+  }
+  .login {
+      width: 80%;
+      margin: 5vw auto;
+      border-radius: 55px;
+  }
+
+  h2 {
+      font-size: 4.5vw;
+  }
+
+  .login img.avatar {
+      width: 80%;
+      max-width: 300px;
+      height: auto;
+      display: block;
+      margin: 0 auto 4vw;
+      box-shadow: 0px 1vw 4vw rgba(0, 0, 0, 0.5);
+  }
+
+  .login input[type="text"],
+  .login input[type="password"] {
+      width: 90%;
+      padding: 3vw;
+      margin: 2vw 0;
+      border: 3px solid #a3a3a3;
+      border-radius: 25px;
+      box-sizing: border-box;
+  }
+  .login input[placeholder] {
+    font-size: 1.7em;
+  }
+  .login button {
+      padding: 3vw 6vw;
+      width: 70%;
+      margin: 4vw auto;
+      font-size: 2em;
+      border-radius: 25px;
+  }
+  .showpass1{
+    display: flex;
+  }
+  .showpass1 p{
+    font-size: 1.9em;
+    padding: 0; 
+    margin-top: 26px;
+    margin-left: 20px;
+    position: relative;
+    color: rgb(152, 149, 149);
+  
+  }
+  .showpass2{
+    display: flex;
+  }
+  .showpass2 p{
+    font-size: 1.9em;
+    padding: 0; 
+    margin-top: 26px;
+    margin-left: 20px;
+    position: relative;
+    color: rgb(152, 149, 149);
+  }
+  .password-toggle {
+    width: 80px; /* Breite des Oval-Containers */
+    height: 50px; /* Höhe des Oval-Containers */
+    margin-top: 15px;
+    margin-bottom: 0px;
+  }
+  
+  .oval {
+    border-radius: 25px; /* Hälfte der Höhe für das ovale Design */
+  }
+  
+  .circle {
+    width: 30px; /* Durchmesser des Kreises */
+    height: 30px; /* Durchmesser des Kreises */
+  }
+}
+
+
+

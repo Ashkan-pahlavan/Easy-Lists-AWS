@@ -1,0 +1,356 @@
+/* Grundlegendes Reset */
+* {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hintergrundvariablen */
+:root {
+  --bg: #3d656800;
+}
+
+/* Body-Styling */
+body {
+  background: radial-gradient(circle farthest-corner at 10% 20%, rgb(82, 84, 102) 0%, rgba(32, 45, 58, 1) 81.3%);
+  background-color: rgb(54, 68, 82);
+  min-height: 100vh;
+  height: auto;
+  min-width: auto;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  color: rgba(127, 255, 212, 0.185);
+  font-size: 40px;
+  text-shadow: 5px 5px 30px rgba(0, 0, 0, 1.5);
+  padding-bottom: 10px;
+}
+
+input {
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 8px;
+  border: none;
+
+}
+
+ul {
+  display: block;
+  justify-content: center;
+}
+
+main {
+  display: block;
+  justify-content: center;
+}
+
+button {
+  margin: 0;
+  background-color: #0fc3cc;
+  color: #dedede;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+#userIdInput {
+  font-size: 2.5em;
+  padding: 8px 0px;
+  text-align: center;
+  margin-bottom: 10px;
+  background-color: rgba(91, 122, 110, 0);
+  border-radius: 10px;
+  /* box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); */
+}
+
+#inp input{
+  border-radius: 10px;
+  border: 3px solid #a3a3a3;
+  /* background-color: #0fc3cc00;
+  color: white; */
+  font-size: 1em;
+}
+/* Deaktivierter Zustand */
+:disabled {
+  display: flex;
+  justify-content: center;
+  color: #00effc;
+}
+
+/* Liste für Aufgaben */
+#tableList {
+  margin: 1% 20%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+/* #tableList li.active{
+  color: #0fc3ccc9;
+} */
+#tableList li.active {
+  background-color: red; /* Roter Hintergrund im aktivierten Zustand */
+  color: white; /* Weißer Text im aktivierten Zustand */
+}
+#tableList li {
+  font-size: 1.2em;
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  color: #8c8e90;
+  list-style: none;
+  margin: 0px 3% 15px 5px;
+  padding: 5px 7px;
+  background-color: rgba(91, 122, 110, 0.38);
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+/* Hervorhebung bei Hover */
+#tableList li:hover {
+  background-color: rgba(91, 122, 110, 0.74);
+  color: #0fc3ccc9;
+  padding-left: 12px;
+  font-size: 1.3em;
+  width: 25.5%;
+
+}
+
+#tableList button {
+  background-color: #00000000;
+  padding: 0;
+  margin: 0px;
+}
+
+#tableList button:hover {
+  background-color: gold;
+}
+
+#todoListe {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+#todoListe li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  color: #dedede;
+  padding: 10px;
+  border: 2px solid #dedede9a;
+  border-radius: 15px;
+  background-color: rgba(91, 122, 110, 0.246);
+  width: 60%;
+}
+
+#todoListe label {
+  font-size: 1.4em;
+}
+
+#todoListe li:hover {
+  color: #0fc3ccc9;
+  width: 60.5%;
+  margin: 1px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  border: 2px solid #dededee9;
+  font-size: 1.1em;
+}
+
+button:hover {
+  background-color: gold;
+  color: #fff;
+  cursor: pointer;
+}
+
+#userName {
+  justify-content: center;
+  display: flex;
+}
+
+#inp {
+  margin: 0px 5px;
+  justify-content: center;
+  display: flex;
+}
+
+#ein {
+  justify-content: center;
+  display: flex;
+  padding: 0px 0px 0px 15px;
+}
+
+#ein button {
+  margin: 7px 5px 2px 5px;
+}
+
+/* Hover-Styling für Aufgaben */
+li:hover {
+  cursor: pointer;
+}
+
+/* Styles für erledigte Aufgaben */
+.task-checked {
+  position: relative;
+  color: rgba(125, 146, 139, 0.77);
+}
+
+.task-checked::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: red;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+/* Checkbox-Styling */
+.checkbox-container input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-custom {
+  position: relative;
+  width: 0px;
+  height: 0px;
+  cursor: pointer;
+}
+
+.checkbox-custom:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 4px solid #8c8e90;
+  border-radius: 8px;
+  transition: background-color 0.8s ease;
+}
+
+.checkbox-custom:checked:before {
+  background-color: #c32517f9;
+}
+
+.checkbox-label {
+  font-size: 25px;
+  margin-left: 5px;
+}
+
+/* Animationen */
+span {
+  margin: 30px;
+  padding: 10px;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background-color: var(--c1);
+  border-radius: 50%;
+  animation: anim 7s var(--d) ease-out infinite;
+}
+
+/* Container-Styling */
+.container {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+/* Keyframes-Animation */
+@keyframes anim {
+  0% {
+    box-shadow: 0 0 8px 6px #1affb300, 0 0 0px 0px var(--bg), 0 0 0px 0px #1affb300;
+  }
+  10% {
+    box-shadow: 0 0 8px 6px var(--c2), 0 0 12px 10px var(--bg), 0 0 12px 14px var(--c2);
+  }
+  100% {
+    box-shadow: 0 0 8px 6px #1affb300, 0 0 0px 40px var(--bg), 0 0 0px 40px #1affb300;
+  }
+}
+
+/* Media Query für Handy-Stile */
+@media screen and (max-width: 700px) {
+  h1 {
+    font-size: 30px;
+    color: rgba(127, 255, 212, 0.185);
+  }
+  
+  span {
+    margin: 15px 10px;
+  }
+  
+  button {
+    padding: 8px;
+    font-size: 0.9em;
+  }
+  
+  #userIdInput {
+    font-size: 2em;
+    padding: 6px 0px;
+    width: 65%;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  }
+
+  #inp{
+    justify-content: center;
+  }
+  
+  #inp input{
+    width: 45%;
+    margin: 0px 5px;
+  }
+
+  #tableList{
+    margin: 0px 0px 10px 0px;
+  }
+
+  #tableList li {
+    font-size: 0.75em;
+    padding: 5px 5px;
+    margin: 15px 5px 0px 0px;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #tableList button {
+    background-color: #00000000;
+    padding: 0;
+    margin: 0px;
+  }
+  
+  #tableList li:hover {
+    width: 30%;
+    font-size: 0.75em;
+    justify-content: space-between;
+  }
+  .checkbox-custom{
+    display: none;
+  }
+  
+  #todoListe li {
+    font-size: 0.8em;
+    width: 100%;
+  }
+  #todoListe li:hover {
+    font-size: 0.8em;
+    width: 100%;
+  }
+  #ein {
+    justify-content: center;
+    display: flex;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    padding: 3px;
+  }
+
+  .container{
+    padding-top: 10px;
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles_login.css">
+    <title>Anmeldung</title>
+</head>
+<body>
+    <div class="imgcontainer">
+        <img src="login.svg" alt="Avatar" class="avatar"  height="500px" width="800px">
+    </div>
+    <div class="login">
+        <form id="loginForm">
+            <h2>Log in</h2>
+            <div class="container">
+                <input type="text" placeholder="Enter your username" name="uname" id="uname" required><br>
+                <input type="password" placeholder="Enter your password" name="psw" id="psw" required>
+                <div class="showpass1">
+                  <div id="showPassword" class="password-toggle">
+                    <div class="oval">
+                        <div class="circle"></div>
+                    </div>
+                  </div>
+                  <p>show password</p>
+                </div>                  
+                <button type="submit" id="loginButton">Log in</button>
+            </div>
+        </form>
+        <br>
+        <h2>New account</h2>
+        <form id="registerForm">
+            <div class="container">
+                <input type="text" placeholder="Enter new username" name="newuname" id="newuname" required>
+                <input type="password" placeholder="Enter new password" name="newpsw" id="newpsw" required>
+                <input type="password" placeholder="Repeat new password" name="newpsw_repeat" id="newpsw_repeat" required>
+                <div class="showpass2">
+                    <div id="showNewPassword" class="password-toggle">
+                        <div class="oval">
+                        <div class="circle"></div>
+                        </div>
+                    </div>
+                  <p>show password</p>
+                </div>                 
+                    <button type="submit" id="registerButton">Registration</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="login.js"></script>
+</body>
+</html>
