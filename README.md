@@ -21,15 +21,6 @@ Das Projekt verwendet folgende Technologien:
 - **Authentifizierung und Autorisierung**: Die Benutzeranmeldung wird über benutzerdefinierte Authorizer in AWS API Gateway implementiert, wobei die Benutzerinformationen in einer sicheren Datenbank gespeichert werden.
 - **Deployment**: Das Frontend und die Backend-Infrastruktur werden über AWS CloudFront und S3 für das Hosting bereitgestellt. Die Anwendung ist über eine HTTPS-geschützte URL zugänglich.
 
-## Installation und Verwendung
-
-Um das Projekt lokal auszuführen, führen Sie die folgenden Schritte aus:
-
-1. Klonen Sie das GitHub-Repository: `git clone <URL_des_Repositories>`
-2. Navigieren Sie in das Verzeichnis des Projekts: `cd EasyLists`
-3. Öffnen Sie die `index.html`-Datei im Browser, um die Anwendung auszuführen.
-
-Für die lokale Entwicklung und Tests müssen Sie sicherstellen, dass Node.js und npm auf Ihrem System installiert sind. Installieren Sie dann die erforderlichen Abhängigkeiten mit dem Befehl `npm install`.
 
 ## Beitrag
 
@@ -37,6 +28,54 @@ Wenn Sie zur Verbesserung dieses Projekts beitragen möchten, können Sie gerne:
 
 - Pull Requests einreichen, um Fehler zu beheben, neue Funktionen hinzuzufügen oder vorhandene Funktionen zu verbessern.
 - Probleme melden, um auf Probleme hinzuweisen oder neue Funktionen vorzuschlagen.
+
+# Lambda-Back-End-Funktionen für Easy Lists
+
+Dieses Repository enthält die Lambda-Back-End-Funktionen, die für das Easy Lists-Projekt verwendet werden. Diese Funktionen sind für die Kommunikation mit der Datenbank verantwortlich und führen verschiedene Operationen wie das Hinzufügen, Löschen und Aktualisieren von Listen und Aufgaben durch.
+
+## Funktionen
+
+### delete_listname.py
+
+Diese Funktion löscht eine Listenbezeichnung und alle damit verbundenen Aufgaben aus der Datenbank.
+
+### delete_taskdescription.py
+
+Diese Funktion löscht eine bestimmte Aufgabenbeschreibung aus der Datenbank.
+
+### login.py
+
+Diese Funktion ermöglicht die Benutzeranmeldung durch Überprüfung des Benutzernamens und des Passworts.
+
+### my_lists.py
+
+Diese Funktion fügt eine neue Liste und die zugehörigen Aufgaben in die Datenbank ein.
+
+### mylists_checked.py
+
+Diese Funktion aktualisiert den Status einer Aufgabe (checked/unchecked) in der Datenbank.
+
+### register.py
+
+Diese Funktion ermöglicht die Registrierung neuer Benutzer und speichert ihre Anmeldeinformationen in der Datenbank.
+
+### show_lists.py
+
+Diese Funktion ruft alle Listen eines bestimmten Benutzers aus der Datenbank ab.
+
+### show_task_description.py
+
+Diese Funktion ruft alle Aufgaben für eine bestimmte Liste eines Benutzers aus der Datenbank ab.
+
+## Einrichtung
+
+Um diese Funktionen zu verwenden, müssen Sie:
+- Die Funktionen in Ihrem AWS Lambda-Konto erstellen.
+- Die erforderlichen AWS-Ressourcen wie DynamoDB-Tabellen erstellen.
+- Die Lambda-Funktionen mit den entsprechenden Datenbanktabellen und Berechtigungen verknüpfen.
+- Die Funktionen in der Serverless-Architektur Ihrer Anwendung aufrufen.
+
+Weitere Informationen zur Einrichtung und Verwendung finden Sie in den Kommentaren innerhalb der Funktionen und in der offiziellen AWS-Dokumentation.
 
 ## Autor
 
