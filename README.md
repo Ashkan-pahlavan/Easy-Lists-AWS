@@ -19,8 +19,7 @@ Das Projekt verwendet folgende Technologien:
 - **Frontend**: HTML, CSS und JavaScript wurden verwendet, um die Benutzeroberfläche zu erstellen. Die Gestaltung ist responsiv und bietet eine benutzerfreundliche Erfahrung auf verschiedenen Geräten.
 - **Backend**: Die Anwendung kommuniziert mit einer serverlosen Backend-Infrastruktur über RESTful-APIs, die auf AWS Lambda und Amazon API Gateway gehostet werden. Die Backend-Logik wird in AWS Lambda-Funktionen implementiert und mithilfe von AWS DynamoDB gespeichert.
 - **Authentifizierung und Autorisierung**: Die Benutzeranmeldung wird über benutzerdefinierte Authorizer in AWS API Gateway implementiert, wobei die Benutzerinformationen in einer sicheren Datenbank gespeichert werden.
-- **Deployment**: Das Frontend und die Backend-Infrastruktur werden über AWS CloudFront und S3 für das Hosting bereitgestellt. Die Anwendung ist über eine HTTPS-geschützte URL zugänglich.
-
+- **Deployment**: Das Frontend und die Backend-Infrastruktur werden über AWS CloudFront und S3 für das Hosting bereitgestellt. 
 
 ## Beitrag
 
