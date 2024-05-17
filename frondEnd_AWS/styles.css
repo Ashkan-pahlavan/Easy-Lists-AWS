@@ -13,7 +13,11 @@
 
 /* Body-Styling */
 body {
-  background: radial-gradient(circle farthest-corner at 10% 20%, rgb(82, 84, 102) 0%, rgba(32, 45, 58, 1) 81.3%);
+  background: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgb(82, 84, 102) 0%,
+    rgba(32, 45, 58, 1) 81.3%
+  );
   background-color: rgb(54, 68, 82);
   min-height: 100vh;
   height: auto;
@@ -23,7 +27,7 @@ body {
 h1 {
   display: flex;
   justify-content: center;
-  color: rgba(127, 255, 212, 0.185);
+  color: rgba(127, 255, 212, 0.274);
   font-size: 40px;
   text-shadow: 5px 5px 30px rgba(0, 0, 0, 1.5);
   padding-bottom: 10px;
@@ -34,7 +38,6 @@ input {
   margin-left: 10px;
   border-radius: 8px;
   border: none;
-
 }
 
 ul {
@@ -49,7 +52,7 @@ main {
 
 button {
   margin: 0;
-  background-color: #0fc3cc;
+  background-color: #0fc3cc98;
   color: #dedede;
   padding: 10px;
   border: none;
@@ -67,7 +70,7 @@ button {
   /* box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); */
 }
 
-#inp input{
+#inp input {
   border-radius: 10px;
   border: 3px solid #a3a3a3;
   /* background-color: #0fc3cc00;
@@ -78,7 +81,9 @@ button {
 :disabled {
   display: flex;
   justify-content: center;
-  color: #00effc;
+  color: #00effc99;
+  /* font-weight: bold; */
+
 }
 
 /* Liste für Aufgaben */
@@ -107,17 +112,21 @@ button {
   background-color: rgba(91, 122, 110, 0.38);
   border-radius: 8px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-  transition: background-color 0.3s, color 0.3s; 
+  transition: background-color 0.3s, color 0.3s;
 }
 
 /* Hervorhebung bei Hover */
 #tableList li:hover {
-  background-color: rgba(91, 122, 110, 0.74);
-  color: #0fc3ccc9;
-  padding-left: 12px;
-  font-size: 1.3em;
-  width: 25.5%;
+  color: #0fc3cc;
+  font-size: 1.22em;
+}
 
+#tableList li.selected {
+  background-color: #00b5bf49;
+  color: rgb(255, 255, 255);
+  padding-left: 12px;
+  width: 25%;
+  box-shadow: 0 0 30px rgba(106, 104, 104, 0.225);
 }
 
 #tableList button {
@@ -137,6 +146,7 @@ button {
 }
 
 #todoListe li {
+  height: auto;
   list-style: none;
   display: flex;
   justify-content: space-between;
@@ -150,6 +160,9 @@ button {
 
 #todoListe label {
   font-size: 1.4em;
+  padding-left: 30px;
+  padding-right: 10px;
+  width: auto;
 }
 
 #todoListe li:hover {
@@ -200,7 +213,7 @@ li:hover {
 }
 
 .task-checked::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 0;
@@ -264,13 +277,16 @@ span {
 /* Keyframes-Animation */
 @keyframes anim {
   0% {
-    box-shadow: 0 0 8px 6px #1affb300, 0 0 0px 0px var(--bg), 0 0 0px 0px #1affb300;
+    box-shadow: 0 0 8px 6px #1affb300, 0 0 0px 0px var(--bg),
+      0 0 0px 0px #1affb300;
   }
   10% {
-    box-shadow: 0 0 8px 6px var(--c2), 0 0 12px 10px var(--bg), 0 0 12px 14px var(--c2);
+    box-shadow: 0 0 8px 6px var(--c2), 0 0 12px 10px var(--bg),
+      0 0 12px 14px var(--c2);
   }
   100% {
-    box-shadow: 0 0 8px 6px #1affb300, 0 0 0px 40px var(--bg), 0 0 0px 40px #1affb300;
+    box-shadow: 0 0 8px 6px #1affb300, 0 0 0px 40px var(--bg),
+      0 0 0px 40px #1affb300;
   }
 }
 
@@ -280,16 +296,16 @@ span {
     font-size: 30px;
     color: rgba(127, 255, 212, 0.185);
   }
-  
+
   span {
     margin: 15px 10px;
   }
-  
+
   button {
     padding: 8px;
     font-size: 0.9em;
   }
-  
+
   #userIdInput {
     font-size: 2em;
     padding: 6px 0px;
@@ -297,16 +313,16 @@ span {
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
   }
 
-  #inp{
+  #inp {
     justify-content: center;
   }
-  
-  #inp input{
+
+  #inp input {
     width: 45%;
     margin: 0px 5px;
   }
 
-  #tableList{
+  #tableList {
     margin: 0px 0px 10px 0px;
   }
 
@@ -324,16 +340,17 @@ span {
     padding: 0;
     margin: 0px;
   }
-  
+
   #tableList li:hover {
     width: 30%;
     font-size: 0.75em;
     justify-content: space-between;
+
   }
-  .checkbox-custom{
+  .checkbox-custom {
     display: none;
   }
-  
+
   #todoListe li {
     font-size: 0.8em;
     width: 100%;
@@ -350,7 +367,7 @@ span {
     padding: 3px;
   }
 
-  .container{
+  .container {
     padding-top: 10px;
   }
 }
