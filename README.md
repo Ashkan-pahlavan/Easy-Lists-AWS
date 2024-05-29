@@ -1,4 +1,4 @@
-��# Easy Lists
+# Easy Lists
 
 Easy Lists ist eine Webanwendung, die es Benutzern ermöglicht, Listen von Aufgaben zu erstellen und zu verwalten. Die Anwendung bietet eine einfache Benutzeroberfläche zum Hinzufügen, Löschen und Überprüfen von Aufgaben in verschiedenen Listen.
 
@@ -52,7 +52,7 @@ Diese Funktion fügt eine neue Liste und die zugehörigen Aufgaben in die Datenb
 
 ### mylists_checked.py
 
-Diese Funktion aktualisiert den Status einer Aufgabe (checked/uncheckedin der Datenbank.
+Diese Funktion aktualisiert den Status einer Aufgabe (checked/unchecked) in der Datenbank.
 
 ### register.py
 
@@ -79,4 +79,3 @@ Weitere Informationen zur Einrichtung und Verwendung finden Sie in den Kommentar
 ## Autor
 
 Das Projekt wurde von Ashkan Pahlavan (ich 😊 )  entwickelt .
-
